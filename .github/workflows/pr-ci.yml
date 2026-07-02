@@ -9,7 +9,6 @@ jobs:
   build-test:
     name: Build and Test Spring Boot App
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
@@ -20,7 +19,8 @@ jobs:
           distribution: temurin
           java-version: '21'
           cache: maven
-
+      - name: Make mvnw executable
+        run: chmod +x ./mvnw
       - name: Run unit tests
         run: ./mvnw clean test
 
