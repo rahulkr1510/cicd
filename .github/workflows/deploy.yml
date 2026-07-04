@@ -18,6 +18,10 @@ jobs:
            distribution: temurin
            java-version: 21
            cache: maven
+
+       - name: Make mvnw executable
+         run: chmod +x ./mvnw
+
        - name: Build Jar
          run: ./mvnw clean package
 
