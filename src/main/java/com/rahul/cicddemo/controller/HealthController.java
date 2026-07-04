@@ -13,7 +13,7 @@ public class HealthController {
 
     @GetMapping("/health")
     public String health() {
-        return "CI/CD Demo App v3 is running";
+        return "CI/CD Demo App v5 is running";
 
     }
 }
